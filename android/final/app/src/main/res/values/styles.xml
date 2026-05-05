@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme, Catppuccin styled -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/catppuccin_background</item>
+        <item name="android:textColorPrimary">@color/catppuccin_text_primary</item>
+        <item name="android:textColorSecondary">@color/catppuccin_text_secondary</item>
+    </style>
+
+</resources>

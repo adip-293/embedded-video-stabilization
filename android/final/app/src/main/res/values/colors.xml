@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Catppuccin-inspired Mocha palette -->
+    <color name="colorPrimary">#1E1E2E</color>        <!-- base -->
+    <color name="colorPrimaryDark">#11111B</color>    <!-- mantle -->
+    <color name="colorAccent">#F5C2E7</color>         <!-- pink -->
+
+    <color name="catppuccin_background">#1E1E2E</color>
+    <color name="catppuccin_surface">#181825</color>
+    <color name="catppuccin_box">#313244</color>
+    <color name="catppuccin_text_primary">#CDD6F4</color>
+    <color name="catppuccin_text_secondary">#BAC2DE</color>
+    <color name="catppuccin_text_muted">#6C7086</color>
+
+    <!-- Extra Catppuccin accents -->
+    <color name="catppuccin_blue">#89B4FA</color>
+    <color name="catppuccin_mauve">#CBA6F7</color>
+    <color name="catppuccin_orange">#FAB387</color>
+</resources>

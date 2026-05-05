@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/catppuccin_background">
+
+    <!-- Left: Raw side -->
+    <LinearLayout
+        android:id="@+id/rawSide"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/rawTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/raw_title"
+            android:textColor="@color/catppuccin_text_primary"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:id="@+id/rawVideoBox"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:background="@color/catppuccin_box"
+            android:padding="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/catppuccin_surface">
+
+                <org.opencv.android.JavaCameraView
+                    android:id="@+id/opencv_camera_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    opencv:show_fps="true"
+                    opencv:camera_id="any" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/liveButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/live_button"
+                android:background="@color/colorAccent"
+                android:textColor="@color/catppuccin_background" />
+            
+            <Button
+                android:id="@+id/motionGatingButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/motion_gating_button"
+                android:background="@color/catppuccin_surface"
+                android:textColor="@color/catppuccin_text_muted" />
+            
+            <Button
+                android:id="@+id/metricsButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/metrics_button"
+                android:background="@color/catppuccin_surface"
+                android:textColor="@color/catppuccin_text_muted" />
+            
+            <Spinner
+                android:id="@+id/filterSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@color/catppuccin_surface"
+                android:spinnerMode="dropdown"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Right: Processed side -->
+    <LinearLayout
+        android:id="@+id/processedSide"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/pipelineTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/stage_gyro"
+            android:textColor="@color/catppuccin_text_primary"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:id="@+id/processedVideoBox"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:background="@color/catppuccin_box"
+            android:padding="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/catppuccin_surface">
+
+                <ImageView
+                    android:id="@+id/processedImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/metricsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:textColor="@color/catppuccin_text_primary"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/pipelineSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="6"
+                android:progress="1"
+                android:progressTint="@color/catppuccin_blue"
+                android:thumbTint="@color/catppuccin_blue" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

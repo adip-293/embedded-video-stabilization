@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FINAL</string>
+
+    <string name="raw_title">Raw</string>
+    <string name="live_button">Live</string>
+    <string name="motion_gating_button">Gate</string>
+    <string name="metrics_button">Metrics</string>
+    <string name="pipeline_title">Gyro/Accelerometer</string>
+    
+    <!-- Filter dropdown options -->
+    <string-array name="filter_options">
+        <item>UMA (Uniform)</item>
+        <item>EMA (Exponential)</item>
+        <item>Gaussian</item>
+        <item>Kalman</item>
+    </string-array>
+
+    <!-- Seek bar: matches runPipeline(..., stage) indices 0–6 -->
+    <string name="stage_raw">Raw</string>
+    <string name="stage_gyro">Gyro/Accelerometer</string>
+    <string name="stage_feature">Feature Extraction</string>
+    <string name="stage_lk">Lucas–Kanade</string>
+    <string name="stage_ransac_affine">RANSAC + Affine Estimation</string>
+    <string name="stage_kalman">Temporal Smoothing</string>
+    <string name="stage_warp">Frame Warping</string>
+</resources>

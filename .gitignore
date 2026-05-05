@@ -1,0 +1,19 @@
+# Android build outputs
+android/final/build/
+android/final/app/build/
+android/final/.gradle/
+android/final/local.properties
+
+# Python
+__pycache__/
+*.pyc
+
+# Output files
+*.csv
+*.png
+crash_log_*.txt
+
+# IDE
+.idea/
+*.iml
+.vscode/

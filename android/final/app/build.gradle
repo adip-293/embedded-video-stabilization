@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.ece420.lab7'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.ece420.lab7"
+        minSdk 28
+        targetSdk 29    // Android 10
+//        targetSdk 33    //Android 13
+//        targetSdk 34    //Android 14
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.quickbirdstudios:opencv-contrib:3.4.5'
+
+    implementation 'androidx.core:core-ktx:1.1.0' // for Android 10
+//    implementation 'androidx.core:core-ktx:1.10.0-alpha01' // for Android 13
+//    implementation 'androidx.core:core-ktx:1.12.0-beta01' // for Android 14
+}
